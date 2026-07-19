@@ -1,0 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+void main() => runApp(MaterialApp(home: Scaffold(body: SafeArea(child: App()))));
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) => InAppWebView(
+    initialFile: "assets/index.html",
+    initialSettings: InAppWebViewSettings(javaScriptEnabled: true),
+  );
+}
